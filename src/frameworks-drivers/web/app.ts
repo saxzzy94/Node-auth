@@ -3,8 +3,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import User from "./routes/user";
 import fileupload from "express-fileupload";
-
-// import transactionRoute from "./routes/transaction/transaction";
 import "dotenv/config";
 
 const app = express();
@@ -19,9 +17,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-	res.send("welcome to transaction- API");
+	res.send("welcome to  API");
 });
 app.use("/users", User);
-
-// app.use("/transactions", transactionRoute);
 export default app;
